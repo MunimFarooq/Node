@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv/config')
 const os = require('os')
 
 const {
@@ -7,7 +7,8 @@ const {
 } = require('./helperMethods')
 
 const data = require('./data')
-const path = os.homedir() + process.env.path + 'OSInfo.txt'
+const path = os.homedir() + process.env.PATH_FILE + 'OSInfo.txt'
 
 saveOsInformationInFile(path, data)
 readOsInformationFromFile(path)
+   
